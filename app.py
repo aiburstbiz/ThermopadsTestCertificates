@@ -116,24 +116,35 @@ def generate_from_official_template(merged, log_placeholder, o_date, s_date, log
     merged['sort_key'] = merged[mod_col].apply(extract_last_3)
     merged_sorted = merged.sort_values(by='sort_key', ascending=False).reset_index(drop=True)
 
+    # --- UPDATED ROW SHIFTING LOGIC ---
+    current_excel_row = 17
+    previous_model = None
+
     for i, row in merged_sorted.iterrows():
-        r = 17 + i
-        ts = datetime.datetime.now().strftime('%H:%M:%S')
+        current_model = str(row[mod_col])
         
-        # AUTO-SCROLL LOGIC: Only show the most recent 10 lines
-        # This makes the client feel the speed without having to scroll manually
-        log_history.append(f"[{ts}] MAPPING: {row[mod_col]} -> Row {r}")
+        # If the Model No changes, physically insert an empty row to push everything down
+        if previous_model is not None and current_model != previous_model:
+            ws.insert_rows(current_excel_row)
+            # We clear borders on this new inserted row to ensure it's a clean gap
+            for cell in ws[current_excel_row]:
+                cell.border = Border()
+            current_excel_row += 1
+
+        ts = datetime.datetime.now().strftime('%H:%M:%S')
+        log_history.append(f"[{ts}] MAPPING: {current_model} -> Row {current_excel_row}")
         log_placeholder.code("\n".join(log_history[-10:]))
         
-        #time.sleep(0.04) 
-
         row_data = [row[mod_col], row[cable_col], row.get('Expectedminout',''), 
                     row.get('Expectedmaxout',''), row.get('Actualminout','')]
         
         for c_idx, val in enumerate(row_data, 1):
-            cell = ws.cell(row=r, column=c_idx, value=str(val)) 
+            cell = ws.cell(row=current_excel_row, column=c_idx, value=str(val)) 
             cell.border = thin_b
             cell.alignment = center
+            
+        previous_model = current_model
+        current_excel_row += 1
             
     return wb, ord_no
 
@@ -151,10 +162,8 @@ with c2: pack_file = st.file_uploader("2. Packing Data", type=["xlsx", "xls", "c
 if qc_file and pack_file:
     if not st.session_state.generated:
         if st.button("🚀 GENERATE OFFICIAL CERTIFICATE"):
-            # The Expandable Log Frame (will become invisible after rerun)
             with st.expander("📊 LIVE PROCESSING LOGS", expanded=True):
                 log_placeholder = st.empty()
-                
                 log_history = [f"[{datetime.datetime.now().strftime('%H:%M:%S')}] STARTING ENGINE..."]
                 log_placeholder.code("\n".join(log_history))
                 
@@ -162,22 +171,25 @@ if qc_file and pack_file:
                 df_pack = load_data_smart(pack_file)
 
                 if df_qc is not None and df_pack is not None:
-                    qc_id = [c for c in df_qc.columns if any(x in c.lower() for x in ['channel', 'cable'])][0]
-                    pk_id = [c for c in df_pack.columns if any(x in c.lower() for x in ['primary', 'cable'])][0]
-                    merged = df_qc.merge(df_pack, left_on=qc_id, right_on=pk_id, how='inner')
+                    qc_id_list = [c for c in df_qc.columns if any(x in c.lower() for x in ['channel', 'cable'])]
+                    pk_id_list = [c for c in df_pack.columns if any(x in c.lower() for x in ['primary', 'cable'])]
+                    
+                    if qc_id_list and pk_id_list:
+                        qc_id = qc_id_list[0]
+                        pk_id = pk_id_list[0]
+                        merged = df_qc.merge(df_pack, left_on=qc_id, right_on=pk_id, how='inner')
 
-                    if not merged.empty:
-                        final_wb, order_id = generate_from_official_template(merged, log_placeholder, order_dt, ship_dt, log_history)
-                        if final_wb:
-                            output = io.BytesIO(); final_wb.save(output)
-                            st.session_state.file_data = output.getvalue()
-                            st.session_state.file_name = f"COA_{order_id}.xlsx"
-                            st.session_state.generated = True
-                            # This trigger makes the logs "invisible" and shows the success screen
-                            st.rerun()
-                    else: st.error("No serial numbers matched.")
+                        if not merged.empty:
+                            final_wb, order_id = generate_from_official_template(merged, log_placeholder, order_dt, ship_dt, log_history)
+                            if final_wb:
+                                output = io.BytesIO(); final_wb.save(output)
+                                st.session_state.file_data = output.getvalue()
+                                st.session_state.file_name = f"COA_{order_id}.xlsx"
+                                st.session_state.generated = True
+                                st.rerun()
+                        else: st.error("No serial numbers matched.")
+                    else: st.error("Columns (Channel/Primary) not found.")
     else:
-        # CLEAN FINAL SCREEN (Logs are now invisible)
         st.success(f"✅ Success! Your certificate is ready.")
         st.download_button("📥 DOWNLOAD CERTIFICATE", st.session_state.file_data, st.session_state.file_name)
         if st.button("🔄 START NEW BATCH"): 
