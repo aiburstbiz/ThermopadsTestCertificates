@@ -261,6 +261,10 @@ def generate_schluter_engine(merged, o_date, s_date, log_p, log_h):
     cable_cols = [c for c in merged.columns if any(x in c.lower() for x in ['cable', 'channel', 'primary'])]
     cable_col  = cable_cols[0] if cable_cols else merged.columns[1]
 
+    merged = merged.copy()
+    merged['_sort_key'] = merged[mod_col].astype(str).str[-3:]
+    merged = merged.sort_values(by=['_sort_key', cable_col]).drop(columns='_sort_key').reset_index(drop=True)
+
     current_excel_row = 17
     previous_model    = None
 
