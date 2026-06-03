@@ -966,7 +966,7 @@ if customer_choice != "Schluter" and selected_template_key:
             default_sno = _m.group(1).strip() if _m else _raw.strip()
         except Exception:
             st.warning(f"⚠️ Could not read template details from {os.path.basename(tpl_path)}")
-    ui_sno = st.text_input(" S.NO (right-side certificate number)", value=default_sno)
+    ui_sno = st.text_input(" S.NO (Certificate Serial Number)", value=default_sno)
 
 # ─── FILE UPLOADERS ───────────────────────────────────────────────────────────
 qc_file_1 = st.file_uploader(" QC Test Report", type=["xlsx", "xls", "csv"])
