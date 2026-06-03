@@ -1,0 +1,184 @@
+{
+    "WARMUP -SFHMT 175W": {
+        "path": "WARMUP -SFHMT 175W.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "WARMUP -FPC": {
+        "path": "WARMUP-FPC.xlsx", "anchor": 19,
+        "sno_row": 12, "sno_col": 7, "date_row": 13, "date_col": 7,
+        "cust_row": 10, "cust_col": 1, "po_row": 11, "podt_row": 12, "prod_row": 13,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "WARMUP -Reel D series": {
+        "path": "WARMUP -Reel D series.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 6, "date_row": 12, "date_col": 6,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "WARMUP -SFHMT 3D": {
+        "path": "WARMUP -SFHMT 3D.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "WARMUP -Loosewire-Ter": {
+        "path": "WARMUP -Loosewire-Ter.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 6, "date_row": 12, "date_col": 6,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "WARMUP -PROWIRE-Ter": {
+        "path": "WARMUP -PROWIRE-Ter.xlsx", "anchor": 15,
+        "sno_row": 8, "sno_col": 7, "date_row": 9, "date_col": 7,
+        "cust_row": 6, "cust_col": 1, "po_row": 7, "podt_row": 8, "prod_row": 9,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "Warmup -fhmt": {
+    "path": "Warmup -fhmt(PVC150 BLUE,RED ).xlsx", "anchor": 18,
+    "sno_row": 10, "sno_col": 7, "date_row": 11, "date_col": 7,
+    "cust_row": 8, "cust_col": 1, "po_row": 9, "podt_row": 10, "prod_row": 11,
+    "is_cladswiss": false,
+    "customer": "Warmup", "folder": "WARMUP"
+    },   
+    "Warmup -Sfhmt 100W 12V": {
+        "path": "Warmup -Sfhmt 100W 12V.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "Warmup uk-UTHC-12W": {
+        "path": "Warmup uk-UTHC-12W.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "Warmup-LFM": {
+        "path": "Warmup-LFM-( W-UP).xlsx", "anchor": 17,
+        "sno_row": 10, "sno_col": 7, "date_row": 11, "date_col": 7,
+        "cust_row": 8, "cust_col": 1, "po_row": 9, "podt_row": 10, "prod_row": 11,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "Warmup-UTHC-13.8W-(UK)": {
+        "path": "Warmup-UTHC-13.8W-(UK).xlsx", "anchor": 16,
+        "sno_row": 9, "sno_col": 7, "date_row": 10, "date_col": 7,
+        "cust_row": 7, "cust_col": 1, "po_row": 8, "podt_row": 9, "prod_row": 10,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "Warmup-UTHC-5.05W(UK)": {
+        "path": "Warmup-UTHC-5.05W(UK).xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": false,
+        "customer": "Warmup", "folder": "WARMUP"
+    },
+    "WAMLY YOURS -FHMT-(Twin)": {
+        "path": "WAMLY YOURS -FHMT-(Twin).xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WAMLY YOURS -LFMT": {
+        "path": "WAMLY YOURS -LFMT.xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WAMLY YOURS - Bench & Shower Mat TWIN": {
+        "path": "WAMLY YOURS - Bench & Shower Mat TWIN.xlsx", "anchor": 21,
+        "sno_row": 14, "sno_col": 7, "date_row": 15, "date_col": 7,
+        "cust_row": 12, "cust_col": 1, "po_row": 13, "podt_row": 14, "prod_row": 15,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WAMLY YOURS -Rectangular Mat TWIN (MINI MAT)": {
+        "path": "WAMLY YOURS -Rectangular Mat TWIN (MINI MAT).xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WARMLY -SLAB MAT": {
+        "path": "WARMLY -SLAB MAT.xlsx", "anchor": 21,
+        "sno_row": 14, "sno_col": 7, "date_row": 15, "date_col": 7,
+        "cust_row": 12, "cust_col": 1, "po_row": 13, "podt_row": 14, "prod_row": 15,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WARMLY -UTHCT-FP": {
+        "path": "WARMLY -UTHCT-FP.xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WARMLY YOURS-SMC": {
+        "path": "WARMLY YOURS-SMC.xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "WARMLY YOURS-SMM": {
+        "path": "WARMLY YOURS-SMM.xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Warmly", "folder": "WARMLY"
+    },
+    "CENIKA VARM SFHMT 150W": {
+        "path": "CENIKA VARM SFHMT 150W.xlsx", "anchor": 22,
+        "sno_row": 15, "sno_col": 7, "date_row": 16, "date_col": 7,
+        "cust_row": 13, "cust_col": 1, "po_row": 14, "podt_row": 15, "prod_row": 16,
+        "is_cladswiss": false,
+        "customer": "Cenika", "folder": "CENIKA"
+    },
+    "CENIKA VARME FHCT 17W": {
+        "path": "CENIKA VARME FHCT 17W .xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Cenika", "folder": "CENIKA"
+    },
+    "CENIKA VARME SMMT-FE": {
+        "path": "CENIKA VARME SMMT-FE .xlsx", "anchor": 20,
+        "sno_row": 13, "sno_col": 7, "date_row": 14, "date_col": 7,
+        "cust_row": 11, "cust_col": 1, "po_row": 12, "podt_row": 13, "prod_row": 14,
+        "is_cladswiss": false,
+        "customer": "Cenika", "folder": "CENIKA"
+    },
+    "CladSwiss-EEFM": {
+        "path": "CladSwiss-EEFM.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": true,
+        "customer": "CladSwiss", "folder": "CLADSWISS"
+    },
+    "CladSwiss-FHC": {
+        "path": "CladSwiss-FHC.xlsx", "anchor": 19,
+        "sno_row": 12, "sno_col": 7, "date_row": 13, "date_col": 7,
+        "cust_row": 10, "cust_col": 1, "po_row": 11, "podt_row": 12, "prod_row": 13,
+        "is_cladswiss": true,
+        "customer": "CladSwiss", "folder": "CLADSWISS"
+    },
+    "CladSwiss-EPM-180W": {
+        "path": "CladSwiss-EPM-180W.xlsx", "anchor": 18,
+        "sno_row": 11, "sno_col": 7, "date_row": 12, "date_col": 7,
+        "cust_row": 9, "cust_col": 1, "po_row": 10, "podt_row": 11, "prod_row": 12,
+        "is_cladswiss": true,
+        "customer": "CladSwiss", "folder": "CLADSWISS"
+    }
+}
